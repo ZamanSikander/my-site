@@ -1,9 +1,13 @@
-import ComingSoon from "./components/CominSoon"
+// import ComingSoon from "./components/CominSoon";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
 const App = () => {
   return (
    
     <div>
-      <ComingSoon/>
+      {/* <ComingSoon/> */}
+      <Navbar/>
+      <Hero/>
     </div>
   )
 }
