@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       fontFamily:  {
-      'sans': ['Source Sans Pro', 'sans-serif'], // for body text
-      'orbitron': ['Orbitron', 'sans-serif'],    // for headings
-      'exo': ['Exo', 'sans-serif'],              // for CTA and navbar links
+        'sans': ['Source Sans Pro', 'sans-serif'], // for body text
+        'orbitron': ['Orbitron', 'sans-serif'],    // for headings
+        'exo': ['Exo', 'sans-serif'],              // for CTA and navbar links
+        'display': ['Exo', 'sans-serif'],          // for navbar brand
+      },
     },
-  
-  },
   },
   plugins: [],
 }

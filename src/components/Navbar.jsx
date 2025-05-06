@@ -1,120 +1,137 @@
-import { useState } from "react";
-import logo_12 from "../assets/logo_12.svg"; // Import the logo
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion"; // Import Framer Motion
+
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Github, Twitter, Linkedin,} from 'lucide-react';
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const links = [
-    { name: "zaman sikander", href: "#" },
-    { name: "Projects", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Contact", href: "#" },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
 
-  // Define animation variants for the navbar
-  const navbarVariants = {
-    hidden: { y: -100, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { type: "spring", duration: 1 } },
-  };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <motion.header
-      className="bg-white mx-auto container font-exo" // Add glass effect
-      initial="hidden"
-      animate="visible"
-      variants={navbarVariants}
+    <header 
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out 
+      ${isScrolled ? 'py-4 bg-white/90 backdrop-blur-md shadow-sm' : 'py-6 bg-transparent'}`}
     >
-      <nav className="p-4 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex justify-start">
-          <a href="#" className="">
-            <img src={logo_12} alt="Logo" className="h-20" />
-          </a>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex space-x-8">
-          {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className=" text-lg"
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="hidden lg:flex">
-          <a
-            href="#"
-            className="text-white bg-black  px-4 py-2 rounded-md text-lg hover:bg-blue-700"
-          >
-            Hire Me
-          </a>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-gray-700 p-2 rounded-md focus:outline-none"
-          >
-            {mobileMenuOpen ? (
-              <XMarkIcon className="h-6 w-6 font-bold" aria-hidden="true" />
-            ) : (
-              <Bars3Icon className="h-6 w-6 font-bold" aria-hidden="true" />
-            )}
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          className="lg:hidden absolute top-[6rem] p-7 mx-auto container z-10 bg-slate-300"
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ type: "spring", duration: 0.5 }}
+      <div className="container mx-auto px-6 flex items-center justify-between">
+        <Link 
+          to="/"
+          className="font-display text-xl font-bold tracking-tight transition-all hover:opacity-70"
         >
-          <div className="flex items-center justify-between">
-            <a href="#" className="flex items-center">
-              <img src={logo_12} alt="Logo" className="" />
-            </a>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-700 p-2 rounded-md"
+          Zaman Sikander
+        </Link>
+
+        <nav className="hidden md:flex items-center space-x-8">
+          <NavLinks />
+        </nav>
+
+        <div className="hidden md:flex items-center space-x-4">
+          <SocialLinks />
+          <a 
+            href="#contact" 
+            className="ml-4 px-5 py-2.5 rounded-full bg-black text-white font-medium 
+            transition-all duration-300 hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-black"
+          >
+            Contact
+          </a>
+        </div>
+
+        <button 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="p-2 md:hidden"
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <div 
+        className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out md:hidden
+        ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+      >
+        <div className="flex flex-col h-full p-6">
+          <div className="flex justify-end">
+            <button 
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2"
+              aria-label="Close menu"
             >
+              <X size={24} />
             </button>
           </div>
-
-          <div className="mt-14">
-            {links.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block text-gray-700 text-base py-2 hover:bg-gray-100 rounded-md px-4"
-              >
-                {link.name}
-              </a>
-            ))}
-            <div className="mt-4">
-              <a
-                href="#"
-                className="block w-full text-center text-white bg-black  px-4 py-2 rounded-md text-sm hover:bg-blue-700"
-              >
-                Hire Me
-              </a>
+          
+          <div className={`flex flex-col items-center justify-center space-y-8 h-full ${isScrolled ? 'py-52 bg-white backdrop-blur-md shadow-sm min-h-screen' : 'py-6 bg-transparent'}`}>
+            <NavLinks closeMenu={() => setIsMenuOpen(false)} />
+            <div className="flex space-x-6 mt-12">
+              <SocialLinks />
             </div>
+            <a 
+              href="#contact" 
+              onClick={() => setIsMenuOpen(false)}
+              className="px-8 py-3 rounded-full bg-black text-white font-medium 
+              transition-all duration-300 hover:bg-black/80"
+            >
+              Contact
+            </a>
           </div>
-        </motion.div>
-      )}
-    </motion.header>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+const NavLinks = ({ closeMenu = () => {} }) => {
+  const links = [
+    { name: "Home", href: "#home" },
+    { name: "Skills", href: "#skills" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "About", href: "#about" },
+  ];
+  
+  return links.map(link => (
+    <a 
+      key={link.name}
+      href={link.href}
+      onClick={closeMenu}
+      className="text-foreground/90 hover:text-foreground transition-colors duration-300 font-medium"
+    >
+      {link.name}
+    </a>
+  ));
+};
+
+const SocialLinks = () => {
+  const socialLinks = [
+    { Icon: Github, href: "https://github.com", label: "GitHub" },
+    { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  ];
+  
+  return (
+    <>
+      {socialLinks.map(({ Icon, href, label }) => (
+        <a 
+          key={label}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-button"
+          aria-label={label}
+        >
+          <Icon size={20} />
+        </a>
+      ))}
+    </>
   );
 };
 
