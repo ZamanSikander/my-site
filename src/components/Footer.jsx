@@ -1,4 +1,5 @@
-import { Github, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -38,15 +39,15 @@ const Footer = () => {
 
 const SocialLinks = () => {
   const socialLinks = [
-    { Icon: Github, href: "https://github.com", label: "GitHub" },
-    { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { Icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: faGithub, href: "https://github.com", label: "GitHub" },
+    { icon: faTwitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: faLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: faInstagram, href: "https://instagram.com", label: "Instagram" },
   ];
   
   return (
     <>
-      {socialLinks.map(({ Icon, href, label }) => (
+      {socialLinks.map(({ icon, href, label }) => (
         <a 
           key={label}
           href={href}
@@ -56,7 +57,7 @@ const SocialLinks = () => {
           hover:bg-white/20 transition-all duration-300"
           aria-label={label}
         >
-          <Icon size={20} />
+          <FontAwesomeIcon icon={icon} />
         </a>
       ))}
     </>

@@ -1,4 +1,6 @@
-import { ArrowUpRight } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; // Common alternative
+
 
 const Projects = () => {
   const projects = [
@@ -53,8 +55,8 @@ const Projects = () => {
                       group-hover:underline transition-all duration-300"
                     >
                       View Project 
-                      <ArrowUpRight 
-                        size={18} 
+                      <FontAwesomeIcon 
+                        icon={faExternalLinkAlt} 
                         className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" 
                       />
                     </a>

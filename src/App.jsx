@@ -1,4 +1,9 @@
-// import ComingSoon from "./components/CominSoon";
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize("G-C15VZ2KE06");
+
+ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
@@ -12,7 +17,6 @@ const App = () => {
   return (
 
     <div>
-      {/* <ComingSoon/> */}
       <Navbar />
       <Hero />
       <Skills />

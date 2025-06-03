@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { Quote } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Testimonials = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -60,7 +61,7 @@ const Testimonials = () => {
               }`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <Quote className="w-10 h-10 text-gray-300 mb-4" />
+              <FontAwesomeIcon icon={faQuoteLeft} className="w-10 h-10 text-gray-300 mb-4" />
               <p className="text-gray-600 text-lg mb-6">{testimonial.quote}</p>
               <div className="mt-auto">
                 <h4 className="font-bold text-gray-800">{testimonial.author}</h4>

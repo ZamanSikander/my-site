@@ -1,7 +1,8 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Github, Twitter, Linkedin,} from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +50,7 @@ const Navbar = () => {
           className="p-2 md:hidden"
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <FontAwesomeIcon icon={faXmark} size="lg" /> : <FontAwesomeIcon icon={faBars} size="lg" />}
         </button>
       </div>
 
@@ -65,7 +66,7 @@ const Navbar = () => {
               className="p-2"
               aria-label="Close menu"
             >
-              <X size={24} />
+              <FontAwesomeIcon icon={faXmark} size="lg" />
             </button>
           </div>
           
@@ -112,14 +113,14 @@ const NavLinks = ({ closeMenu = () => {} }) => {
 
 const SocialLinks = () => {
   const socialLinks = [
-    { Icon: Github, href: "https://github.com", label: "GitHub" },
-    { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: faGithub, href: "https://github.com", label: "GitHub" },
+    { icon: faTwitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: faLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
   ];
   
   return (
     <>
-      {socialLinks.map(({ Icon, href, label }) => (
+      {socialLinks.map(({ icon, href, label }) => (
         <a 
           key={label}
           href={href}
@@ -128,7 +129,7 @@ const SocialLinks = () => {
           className="icon-button"
           aria-label={label}
         >
-          <Icon size={20} />
+          <FontAwesomeIcon icon={icon} size="lg" />
         </a>
       ))}
     </>

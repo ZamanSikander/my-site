@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Send } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -111,7 +112,7 @@ const Contact = () => {
                   hover:bg-black/80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
                 >
                   Send Message
-                  <Send size={18} />
+                  <FontAwesomeIcon icon={faPaperPlane} />
                 </button>
               </form>
             </div>

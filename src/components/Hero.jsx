@@ -1,4 +1,6 @@
-import { ArrowRight, Github, Twitter, Linkedin } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import hero_section from "../assets/hero_section.svg"
 
@@ -21,18 +23,18 @@ const Hero = () => {
               <h1 className="text-3xl md:text-4xl font-semibold mb-4 animate-fade-up" style={{ animationDelay: '200ms' }}>
                 Crafting Modern & Responsive Front-End Experiences
               </h1>
-              <p className="text-black/60 mb-6 animate-fade-in">
-                I&apos;m <span className='font-semibold'>Zaman Sikander,</span> a Front-End Developer with 3+ years of experience in building user-friendly websites using React, Tailwind CSS, JavaScript, and WordPress. I specialize in transforming ideas into interactive, high-performing digital products.
+              <p className="text-black/60 mb-6 animate-fade-in w-[15rem] md:w-[25rem]">
+                I am <span className='font-semibold'>Zaman Sikander,</span> a Front-End Developer with 3+ years of experience in building user-friendly websites using React, Tailwind CSS, JavaScript, and WordPress. I specialize in transforming ideas into interactive, high-performing digital products.
               </p>
               <div
                 className="flex flex-wrap gap-4 mb-8 animate-fade-up"
                 style={{ animationDelay: '600ms' }}
               >
                 {[
-                  { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-                  { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                  { Icon: Github, href: "https://github.com", label: "GitHub" }
-                ].map(({ Icon, href, label }) => (
+                  { icon: faTwitter, href: "https://twitter.com", label: "Twitter" },
+                  { icon: faLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+                  { icon: faGithub, href: "https://github.com", label: "GitHub" }
+                ].map(({ icon, href, label }) => (
                   <a
                     key={label}
                     href={href}
@@ -42,7 +44,7 @@ const Hero = () => {
                     hover:bg-gray-200 transition-all duration-300"
                     aria-label={label}
                   >
-                    <Icon size={20} className="text-gray-700" />
+                    <FontAwesomeIcon icon={icon} className="text-gray-700" />
                   </a>
                 ))}
               </div>
@@ -56,7 +58,7 @@ const Hero = () => {
                   font-medium hover:bg-black/80 transition-all duration-300"
                 >
                   Contact Me
-                  <ArrowRight size={18} />
+                  <FontAwesomeIcon icon={faArrowRight} />
                 </a>
               </div>
             </div>
@@ -72,6 +74,8 @@ const Hero = () => {
                 <img
                   src={hero_section}
                   alt="Zaman Sikander portrait"
+                  width={400}
+                  height={400}
                   className="w-4/5 object-contain object-bottom"
                 />
               </div>
