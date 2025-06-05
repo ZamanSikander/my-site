@@ -1,8 +1,9 @@
 import ReactGA from 'react-ga4';
 
-ReactGA.initialize("G-C15VZ2KE06");
+ReactGA.initialize("G-B88F4P2GE9"); // ✅ Use the current Measurement ID
 
 ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -17,9 +18,9 @@ const App = () => {
   return (
 
     <div>
-      <Navbar />
-      <Hero />
-      <Skills />
+      <Navbar/>
+      <Hero/>
+      <Skills/>
       <Experience/>
       <Projects/>
       <About/>
