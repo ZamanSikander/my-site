@@ -53,8 +53,8 @@ const Contact = () => {
               </div>
               <div className="mt-8">
                 <p className="font-medium mb-2">Email me at</p>
-                <a href="mailto:hello@zamansikander.com" className="text-lg font-medium text-gray-800 hover:underline">
-                  hello@zamansikander.com
+                <a href="mailto:contact@zamansikander.com" className="text-lg font-medium text-blue-600 hover:underline hover:text-blue-700">
+                  contact@zamansikander.com
                 </a>
               </div>
             </div>

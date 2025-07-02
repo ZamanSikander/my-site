@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import hero_section from "../assets/hero_section.svg"
 
@@ -31,9 +31,8 @@ const Hero = () => {
                 style={{ animationDelay: '600ms' }}
               >
                 {[
-                  { icon: faTwitter, href: "https://twitter.com", label: "Twitter" },
-                  { icon: faLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                  { icon: faGithub, href: "https://github.com", label: "GitHub" }
+                  { icon: faGithub, href: "https://github.com/zamansikander/", label: "GitHub" },
+                  { icon: faLinkedin, href: "https://linkedin.com/in/zamansikander/", label: "LinkedIn" }
                 ].map(({ icon, href, label }) => (
                   <a
                     key={label}

@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; // Common alternative
-
+import port_1 from '../assets/port_1.png';
 
 const Projects = () => {
   const projects = [
@@ -8,7 +8,7 @@ const Projects = () => {
       id: "01",
       title: "Digital Business Application",
       description: "A modern web application for business management with comprehensive features.",
-      image: "/lovable-uploads/f4562509-d293-4de3-8d5d-8bd1b154d6e6.png",
+      image: port_1,
       link: "#",
     },
     {
@@ -63,7 +63,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 order-1 md:order-2">
-                  <div className="overflow-hidden rounded-2xl aspect-[4/3] bg-gray-50 transition-all duration-300">
+                  <div className="overflow-hidden rounded-2xl aspect-square bg-gray-50 transition-all duration-300">
                     <img 
                       src={project.image} 
                       alt={project.title} 

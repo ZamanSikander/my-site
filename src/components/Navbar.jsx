@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -113,9 +113,8 @@ const NavLinks = ({ closeMenu = () => {} }) => {
 
 const SocialLinks = () => {
   const socialLinks = [
-    { icon: faGithub, href: "https://github.com", label: "GitHub" },
-    { icon: faTwitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: faLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: faGithub, href: "https://github.com/zamansikander/", label: "GitHub" },
+    { icon: faLinkedin, href: "https://linkedin.com/in/zamansikander/", label: "LinkedIn" },
   ];
   
   return (
