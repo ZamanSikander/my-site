@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faUpwork} from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -41,6 +41,7 @@ const SocialLinks = () => {
   const socialLinks = [
     { icon: faGithub, href: "https://github.com/zamansikander/", label: "GitHub" },
     { icon: faLinkedin, href: "https://linkedin.com/in/zamansikander/", label: "LinkedIn" },
+    {icon: faUpwork, href:"https://www.upwork.com/freelancers/~01ef4eb25f55486b6f?mp_source=share", label: "Upwork"}
   ];
   
   return (
