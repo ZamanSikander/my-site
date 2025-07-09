@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faUpwork } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,20 +36,20 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center space-x-4">
           <SocialLinks />
-          <a 
+          {/* <a 
             href="#contact" 
             className="ml-4 px-5 py-2.5 rounded-lg bg-black text-white font-medium 
             transition-all duration-300 hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-black"
           >
             Contact
-          </a>
-          <a 
+          </a> */}
+          {/* <a 
               href="https://www.upwork.com/freelancers/~01ef4eb25f55486b6f?mp_source=share" 
               className="ml-4 px-5 py-2.5 rounded-lg bg-black text-white font-medium 
               transition-all duration-300 hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-black"
           >
             Hire me on Upwork
-          </a>
+          </a> */}
         </div>
 
         <button 
@@ -82,21 +82,21 @@ const Navbar = () => {
             <div className="flex space-x-6 mt-12">
               <SocialLinks />
             </div>
-            <a 
+            {/* <a 
               href="#contact" 
               onClick={() => setIsMenuOpen(false)}
               className="px-8 py-3 rounded-lg bg-black text-white font-medium 
               transition-all duration-300 hover:bg-black/80"
             >
               Contact
-            </a>
-            <a 
+            </a> */}
+            {/* <a 
               href="#contact" 
               className="px-8 py-3 rounded-lg bg-black text-white font-medium 
               transition-all duration-300 hover:bg-black/80"
             >
               Hire me on Upwork
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -107,10 +107,11 @@ const Navbar = () => {
 const NavLinks = ({ closeMenu = () => {} }) => {
   const links = [
     { name: "Home", href: "#home" },
-    { name: "Skills", href: "#skills" },
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "About", href: "#about" },
+    { name: "Testimonials", href: "#testimonials" },
+    {name: "Contact", href: "#contact"},
   ];
   
   return links.map(link => (
@@ -129,6 +130,7 @@ const SocialLinks = () => {
   const socialLinks = [
     { icon: faGithub, href: "https://github.com/zamansikander/", label: "GitHub" },
     { icon: faLinkedin, href: "https://linkedin.com/in/zamansikander/", label: "LinkedIn" },
+    {icon: faUpwork, href: "https://www.upwork.com/freelancers/~01ef4eb25f55486b6f?mp_source=share", label: "Upwork"}
   ];
   
   return (
