@@ -7,7 +7,7 @@ const RatingPopup = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 3500); // show after 3.5 seconds
+    const timer = setTimeout(() => setShow(true), 3000); // show after 3.5 seconds
     return () => clearTimeout(timer);
   }, []);
 
