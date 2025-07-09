@@ -14,7 +14,7 @@ import About from "./components/About";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import WhatsappFloatButton from "./components/WhatsappFloatButton";
+import RatingPopup from './components/RatingPopUp';
 const App = () => {
   return (
 
@@ -28,7 +28,7 @@ const App = () => {
       <Testimonials/>
       <Contact/>
       <Footer/>
-      <WhatsappFloatButton/>
+      <RatingPopup/>
     </div>
 
   )
