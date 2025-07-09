@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faUpwork } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import hero_section from "../assets/hero_section.svg"
 
@@ -32,7 +31,8 @@ const Hero = () => {
               >
                 {[
                   { icon: faGithub, href: "https://github.com/zamansikander/", label: "GitHub" },
-                  { icon: faLinkedin, href: "https://linkedin.com/in/zamansikander/", label: "LinkedIn" }
+                  { icon: faLinkedin, href: "https://linkedin.com/in/zamansikander/", label: "LinkedIn" },
+                  { icon: faUpwork, href: "https://www.upwork.com/freelancers/~01ef4eb25f55486b6f?mp_source=share", label: "Upwork" }
                 ].map(({ icon, href, label }) => (
                   <a
                     key={label}
@@ -53,11 +53,10 @@ const Hero = () => {
               >
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-lg
-                  font-medium hover:bg-black/80 transition-all duration-300"
+                  className="ml-4 px-5 py-2.5 rounded-lg bg-black text-white font-medium 
+              transition-all duration-300 hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-black"
                 >
                   Contact Me
-                  <FontAwesomeIcon icon={faArrowRight} />
                 </a>
               </div>
             </div>

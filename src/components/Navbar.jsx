@@ -30,24 +30,31 @@ const Navbar = () => {
           Zaman Sikander
         </Link>
 
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden lg:flex items-center space-x-8">
           <NavLinks />
         </nav>
 
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden lg:flex items-center space-x-4">
           <SocialLinks />
           <a 
             href="#contact" 
-            className="ml-4 px-5 py-2.5 rounded-full bg-black text-white font-medium 
+            className="ml-4 px-5 py-2.5 rounded-lg bg-black text-white font-medium 
             transition-all duration-300 hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-black"
           >
             Contact
+          </a>
+          <a 
+              href="https://www.upwork.com/freelancers/~01ef4eb25f55486b6f?mp_source=share" 
+              className="ml-4 px-5 py-2.5 rounded-lg bg-black text-white font-medium 
+              transition-all duration-300 hover:bg-black/80 focus:outline-none focus:ring-2 focus:ring-black"
+          >
+            Hire me on Upwork
           </a>
         </div>
 
         <button 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="p-2 md:hidden"
+          className="p-2 lg:hidden"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <FontAwesomeIcon icon={faXmark} size="lg" /> : <FontAwesomeIcon icon={faBars} size="lg" />}
@@ -56,7 +63,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div 
-        className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out md:hidden
+        className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out lg:hidden
         ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex flex-col h-full p-6">
@@ -70,7 +77,7 @@ const Navbar = () => {
             </button>
           </div>
           
-          <div className={`flex flex-col items-center justify-center space-y-8 h-full ${isScrolled ? 'py-52 bg-white backdrop-blur-md shadow-sm min-h-screen' : 'py-6 bg-transparent'}`}>
+          <div className={`flex flex-col items-center justify-center space-y-5 h-full ${isScrolled ? 'py-48 bg-white backdrop-blur-md shadow-sm min-h-screen' : 'py-6 bg-transparent'}`}>
             <NavLinks closeMenu={() => setIsMenuOpen(false)} />
             <div className="flex space-x-6 mt-12">
               <SocialLinks />
@@ -78,10 +85,17 @@ const Navbar = () => {
             <a 
               href="#contact" 
               onClick={() => setIsMenuOpen(false)}
-              className="px-8 py-3 rounded-full bg-black text-white font-medium 
+              className="px-8 py-3 rounded-lg bg-black text-white font-medium 
               transition-all duration-300 hover:bg-black/80"
             >
               Contact
+            </a>
+            <a 
+              href="#contact" 
+              className="px-8 py-3 rounded-lg bg-black text-white font-medium 
+              transition-all duration-300 hover:bg-black/80"
+            >
+              Hire me on Upwork
             </a>
           </div>
         </div>
