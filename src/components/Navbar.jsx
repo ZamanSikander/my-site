@@ -119,7 +119,7 @@ const NavLinks = ({ closeMenu = () => {} }) => {
       key={link.name}
       href={link.href}
       onClick={closeMenu}
-      className="text-foreground/90 hover:text-foreground transition-colors duration-300 font-medium"
+      className="text-foreground/90 hover:text-foreground transition-colors duration-300 font-medium hover:underline"
     >
       {link.name}
     </a>
