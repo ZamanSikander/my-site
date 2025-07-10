@@ -149,7 +149,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div className="p-6 bg-[#f9f9f9] min-h-screen">
+    <div className="p-6 bg-[#f9f9f9] min-h-screen" id="projects">
       <h2 className="text-3xl font-bold mb-8 text-center">My Projects</h2>
 
       {/* Bento Grid */}
