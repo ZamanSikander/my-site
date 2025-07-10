@@ -3,30 +3,35 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const [status, setStatus] = useState(null); // success | error | null
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleChange = (e) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formState);
-    // Reset form
-    setFormState({
-      name: '',
-      email: '',
-      message: ''
-    });
-    // Here you would typically send the form data to a backend
-    alert('Thanks for your message! I will get back to you soon.');
+    setSubmitting(true);
+    setStatus(null);
+
+    const formData = new FormData(e.target);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("success");
+        e.target.reset(); // clear form
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -61,6 +66,8 @@ const Contact = () => {
 
             <div className="bg-white p-8 rounded-2xl shadow-sm">
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input type="hidden" name="access_key" value="3cef179f-30bb-4b8a-90e5-5ee60513d436" />
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700">
                     Name
@@ -69,8 +76,6 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formState.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     placeholder="Your name"
@@ -84,8 +89,6 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formState.email}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     placeholder="Your email"
@@ -98,21 +101,28 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formState.message}
-                    onChange={handleChange}
                     required
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
                     placeholder="How can I help you?"
                   />
                 </div>
+
+                {status === "success" && (
+                  <p className="text-green-600 font-medium">Thank you for contacting me. Your message has been delivered! ✅</p>
+                )}
+                {status === "error" && (
+                  <p className="text-red-600 font-medium">Oops! Something went wrong. Please try again later. ❌</p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-black text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center gap-2
-                  hover:bg-black/80 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                  disabled={submitting}
+                  className={`w-full bg-black text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center gap-2
+                  ${submitting ? "opacity-50 cursor-not-allowed" : "hover:bg-black/80"} transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2`}
                 >
-                  Send Message
-                  <FontAwesomeIcon icon={faPaperPlane} />
+                  {submitting ? "Sending..." : "Send Message"}
+                  {!submitting && <FontAwesomeIcon icon={faPaperPlane} />}
                 </button>
               </form>
             </div>
