@@ -12,23 +12,29 @@ const Contact = () => {
     setStatus(null);
 
     const formData = new FormData(e.target);
+    const data = {
+      fullName: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    };
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
+      const res = await fetch('https://my-site-backend-one.vercel.app/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
       });
 
-      const result = await res.json();
+      await res.json();
 
-      if (result.success) {
-        setStatus("success");
+      if (res.status === 200) {
+        setStatus('success');
         e.target.reset(); // clear form
       } else {
-        setStatus("error");
+        setStatus('error');
       }
     } catch {
-      setStatus("error");
+      setStatus('error');
     } finally {
       setSubmitting(false);
     }
@@ -50,7 +56,7 @@ const Contact = () => {
               <h3 className="text-2xl font-semibold mb-6">Something Special?</h3>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  I&apos;m always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                  I am always open to discussing new projects, creative ideas or opportunities to be part of your vision.
                 </p>
                 <p>
                   Whether you need a web application, want to revamp your digital presence, or just want to chat about technology - I&apos;m here to help.
@@ -66,8 +72,6 @@ const Contact = () => {
 
             <div className="bg-white p-8 rounded-2xl shadow-sm">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <input type="hidden" name="access_key" value="3cef179f-30bb-4b8a-90e5-5ee60513d436" />
-
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2 text-gray-700">
                     Name
