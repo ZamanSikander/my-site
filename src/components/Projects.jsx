@@ -85,7 +85,9 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import port_1 from '../assets/port_1.png'
+import port_1 from '../assets/port_1.png';
+import port_2 from '../assets/port_2.png';
+import port_3 from '../assets/port_3.png'
 const projects = [
   {
     id: 1,
@@ -93,23 +95,23 @@ const projects = [
     image: port_1,
     description: "A personal portfolio site built with React and Tailwind CSS.",
     link: "https://yourportfolio.com",
-    size: "col-span-2 row-span-2",
+    size: "col-span-2 sm:col-span-3 sm:row-span-1 md:row-span-2 lg:col-span-2",
   },
   {
     id: 2,
     title: "E-commerce Platform",
-    image: port_1,
+    image: port_2,
     description: "A fully functional online store with cart and payments.",
     link: "https://yourecommerce.com",
-    size: "col-span-1 row-span-3",
+    size: "col-span-1 md:row-span-2",
   },
   {
     id: 3,
     title: "Dashboard UI",
-    image: port_1,
+    image: port_3,
     description: "Analytics dashboard with KPIs, charts, and stats.",
     link: "https://yourdashboard.com",
-    size: "col-span-1 row-span-3",
+    size: "col-span-1 md:row-span-2",
   },
   {
     id: 4,
@@ -117,7 +119,7 @@ const projects = [
     image: port_1,
     description: "Marketing landing page for product or service promotion.",
     link: "https://landingpage.com",
-    size: "col-span-1 row-span-2",
+    size: "col-span-2 sm:col-span-1 md:row-span-2 lg:col-span-2",
   },
   {
     id: 5,
@@ -125,7 +127,7 @@ const projects = [
     image: port_1,
     description: "Marketing landing page for product or service promotion.",
     link: "https://landingpage.com",
-    size: "col-span-1 row-span-1",
+    size: "col-span-1 sm:col-span-2 row-span-1",
   },
   {
     id: 6,
@@ -133,7 +135,7 @@ const projects = [
     image: port_1,
     description: "Marketing landing page for product or service promotion.",
     link: "https://landingpage.com",
-    size: "col-span-2 row-span-1",
+    size: "col-span-1 row-span-1 md:col-span-2",
   },
   {
     id: 7,
@@ -141,7 +143,7 @@ const projects = [
     image: port_1,
     description: "Marketing landing page for product or service promotion.",
     link: "https://landingpage.com",
-    size: "col-span-1 row-span-1",
+    size: "col-span-2 sm:col-span-3 row-span-1 md:col-span-4 lg:row-span-2",
   },
 ];
 
@@ -153,7 +155,7 @@ export default function Projects() {
       <h2 className="text-3xl font-bold mb-8 text-center">My Projects</h2>
 
       {/* Bento Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 auto-rows-[150px] gap-4">
         {projects.map((project) => (
           <div
             key={project.id}
