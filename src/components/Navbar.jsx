@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faUpwork } from '@fortawesome/free-brands-svg-icons';
-
+import logo_1 from "../assets/logo_1.png"
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,9 +25,9 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link 
           to="/"
-          className="font-display text-xl font-bold tracking-tight transition-all hover:opacity-70"
+          className="flex items-center transition-all hover:opacity-70"
         >
-          Zaman Sikander
+          <img src={logo_1} alt="Zaman Sikander Logo" className="h-10 sm:h-12 md:h-14 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center space-x-8">
