@@ -18,7 +18,7 @@ const Footer = () => {
           
           <div className="text-right hidden md:block">
             <div className="flex flex-col items-end">
-              <p className="text-white/70 mb-2">contact@zamansikander.com</p>
+              <p className="text-white/70 mb-2">zamansikander8577@gmail.com</p>
               <p className="text-white/70">+92-304-6282698</p>
             </div>
             <p className="text-white/50 mt-8">© 2025 Zaman Sikander. All rights reserved.</p>
@@ -26,7 +26,7 @@ const Footer = () => {
           
           <div className="md:hidden">
             <div className="flex flex-col">
-              <p className="text-white/70 mb-2">contact@zamansikander.com</p>
+              <p className="text-white/70 mb-2">zamansikander8577@gmail.com</p>
               <p className="text-white/70">+92-3046282698</p>
             </div>
             <p className="text-white/50 mt-8">© 2025 Zaman Sikander. All rights reserved.</p>
