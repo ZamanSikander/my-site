@@ -10,7 +10,6 @@ const Contact = () => {
     e.preventDefault();
     setSubmitting(true);
     setStatus(null);
-
     const formData = new FormData(e.target);
     const data = {
       fullName: formData.get('name'),
