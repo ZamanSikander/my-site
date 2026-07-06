@@ -1,41 +1,32 @@
 {
   "name": "zamansikander.com",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint",
+    "serve:out": "node scripts/serve-static.mjs",
+    "verify:out": "node scripts/verify-static.mjs"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@fortawesome/free-brands-svg-icons": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@heroicons/react": "^2.2.0",
-    "axios": "^1.10.0",
-    "motion": "^11.11.17",
+    "framer-motion": "^12.42.2",
+    "lucide-react": "^1.23.0",
+    "next": "^14.2.35",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-ga4": "^2.1.0",
-    "react-router-dom": "^7.5.0",
-    "swiper": "^11.2.10"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
+    "@types/node": "^20.19.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.13.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "globals": "^15.11.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
     "postcss": "^8.4.49",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.15",
-    "vite": "^5.4.10"
+    "typescript": "^5.6.3"
   }
 }

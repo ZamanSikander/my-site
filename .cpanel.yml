@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - /opt/alt/versions/nodejs16/bin/npm install
-    - /opt/alt/versions/nodejs16/bin/npm run build
-    - rsync -av --delete build/ /home/csdr6164jdji/public_html/
