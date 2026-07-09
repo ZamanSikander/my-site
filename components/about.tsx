@@ -6,14 +6,15 @@ export function About() {
     <section id="about" className="section-pad bg-white dark:bg-[#151515]">
       <div className="container-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <MotionSection>
-          <div className="relative overflow-hidden rounded-md border border-ink/10 bg-paper p-4 dark:border-white/10 dark:bg-ink">
+          <div className="relative mx-auto max-w-[380px] overflow-hidden rounded-md border border-ink/10 bg-ink shadow-soft sm:max-w-[440px] lg:mx-0">
             <img
-              src="/assets/hero-section.svg"
-              alt="Zaman Sikander portrait illustration"
+              src="/assets/profile_img.jpeg"
+              alt="Portrait of Zaman Sikander"
               width="560"
               height="560"
-              className="mx-auto aspect-square w-full max-w-[440px] object-contain"
+              className="aspect-square w-full object-cover object-[52%_45%]"
             />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-r from-moss/18 via-gold/16 to-clay/18 mix-blend-screen" />
           </div>
         </MotionSection>
 
