@@ -14,7 +14,7 @@ export function Hero() {
       <div className="container-shell grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <MotionSection>
           <p className="eyebrow">Freelance full-stack web developer</p>
-          <h1 className="mt-5 max-w-4xl font-[var(--font-display)] text-5xl font-semibold leading-[1.02] text-ink sm:text-6xl lg:text-7xl dark:text-paper">
+          <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.02] text-ink sm:text-6xl lg:text-7xl dark:text-paper">
             Crafting modern, responsive web experiences.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/70 dark:text-paper">
@@ -73,7 +73,7 @@ export function Hero() {
                 key={stat.label}
                 className="rounded border border-ink/10 bg-white/70 p-3 dark:border-white/10 dark:bg-white/5"
               >
-                <p className="font-[var(--font-display)] text-2xl font-semibold text-clay dark:text-gold">
+                <p className="text-2xl font-semibold text-clay dark:text-gold">
                   {stat.value}
                 </p>
                 <p className="mt-1 text-xs leading-5 text-ink/62 dark:text-paper/62">

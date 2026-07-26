@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { navItems, site, socialLinks } from '@/lib/content';
-import { ThemeToggle } from '@/components/theme-toggle';
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { navItems, site, socialLinks } from "@/lib/content";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,45 +13,50 @@ export function Navigation() {
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 12);
     onScroll();
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'border-b border-ink/10 bg-paper/90 py-3 shadow-sm backdrop-blur-xl dark:border-gold/20 dark:bg-[#19191f]/95'
-          : 'py-5 dark:border-b dark:border-white/10 dark:bg-[#19191f]/88 dark:backdrop-blur-xl'
+          ? "border-b border-ink/10 bg-paper/90 py-3 shadow-sm backdrop-blur-xl dark:border-gold/20 dark:bg-[#19191f]/95"
+          : "py-5 dark:border-b dark:border-white/10 dark:bg-[#19191f]/88 dark:backdrop-blur-xl"
       }`}
     >
       <div className="container-shell flex items-center justify-between gap-4">
-        <a href="#home" className="focus-ring flex items-center gap-3 rounded-full" aria-label={`${site.name} home`}>
-          <img src="/assets/logo.webp" alt="" width="44" height="44" className="h-11 w-11 rounded-full object-cover" />
+        <a
+          href="#home"
+          className="focus-ring flex items-center gap-3 rounded-full"
+          aria-label={`${site.name} home`}
+        >
+          <img
+            src="/assets/logo.webp"
+            alt=""
+            width="44"
+            height="44"
+            className="h-11 w-11 rounded-full object-cover"
+          />
           <span className="hidden font-semibold sm:inline">{site.name}</span>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
+        <nav
+          className="hidden items-center gap-7 lg:flex"
+          aria-label="Primary navigation"
+        >
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="text-sm font-medium text-ink/72 transition hover:text-clay dark:text-paper/90 dark:hover:text-gold">
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-sm font-medium text-ink/72 transition hover:text-clay dark:text-paper/90 dark:hover:text-gold"
+            >
               {item.label}
             </a>
           ))}
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          {socialLinks.map(({ href, label, icon: Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={label}
-              className="focus-ring grid h-10 w-10 place-items-center rounded-full text-ink/70 transition hover:-translate-y-0.5 hover:bg-white hover:text-clay dark:text-paper/85 dark:hover:bg-white/10 dark:hover:text-gold"
-            >
-              <Icon aria-hidden="true" className="h-4 w-4" />
-            </a>
-          ))}
           <ThemeToggle />
         </div>
 
@@ -64,7 +69,11 @@ export function Navigation() {
             aria-label="Toggle navigation menu"
             aria-expanded={isOpen}
           >
-            {isOpen ? <X aria-hidden="true" className="h-5 w-5" /> : <Menu aria-hidden="true" className="h-5 w-5" />}
+            {isOpen ? (
+              <X aria-hidden="true" className="h-5 w-5" />
+            ) : (
+              <Menu aria-hidden="true" className="h-5 w-5" />
+            )}
           </button>
         </div>
       </div>
@@ -77,7 +86,10 @@ export function Navigation() {
             exit={{ opacity: 0, y: -12 }}
             className="container-shell mt-4 lg:hidden"
           >
-            <nav className="rounded-md border border-ink/10 bg-paper p-3 shadow-soft dark:border-gold/20 dark:bg-[#1f1f26]" aria-label="Mobile navigation">
+            <nav
+              className="rounded-md border border-ink/10 bg-paper p-3 shadow-soft dark:border-gold/20 dark:bg-[#1f1f26]"
+              aria-label="Mobile navigation"
+            >
               {navItems.map((item) => (
                 <a
                   key={item.href}

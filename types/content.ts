@@ -1,9 +1,12 @@
-import type { LucideIcon } from 'lucide-react';
+import type { ComponentType, SVGProps } from "react";
+import type { LucideIcon } from "lucide-react";
+
+type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
 export type SocialLink = {
   label: string;
   href: string;
-  icon: LucideIcon;
+  icon: IconComponent;
 };
 
 export type Stat = {

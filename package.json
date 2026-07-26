@@ -6,24 +6,24 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "lint": "next lint",
+    "lint": "eslint .",
     "serve:out": "node scripts/serve-static.mjs",
     "verify:out": "node scripts/verify-static.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
     "lucide-react": "^1.23.0",
-    "next": "^14.2.35",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "next": "16.2.11",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@types/node": "^20.19.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.20",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.35",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.2.11",
     "postcss": "^8.4.49",
     "sharp": "^0.35.3",
     "tailwindcss": "^3.4.15",

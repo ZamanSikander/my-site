@@ -1,13 +1,14 @@
-import { navItems, site, socialLinks } from '@/lib/content';
+import { navItems, site, socialLinks } from "@/lib/content";
 
 export function Footer() {
   return (
     <footer className="bg-ink py-12 text-paper dark:bg-black">
       <div className="container-shell grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-end">
         <div>
-          <h2 className="font-[var(--font-display)] text-3xl font-semibold">{site.name}</h2>
+          <h2 className="text-3xl font-semibold">{site.name}</h2>
           <p className="mt-4 max-w-md leading-7 text-paper/68">
-            Creating elegant, responsive, and user-friendly web experiences through clean code and thoughtful design.
+            Creating elegant, responsive, and user-friendly web experiences
+            through clean code and thoughtful design.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {socialLinks.map(({ href, label, icon: Icon }) => (
@@ -26,9 +27,16 @@ export function Footer() {
         </div>
 
         <div className="md:text-right">
-          <nav className="flex flex-wrap gap-x-5 gap-y-2 md:justify-end" aria-label="Footer navigation">
+          <nav
+            className="flex flex-wrap gap-x-5 gap-y-2 md:justify-end"
+            aria-label="Footer navigation"
+          >
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} className="text-sm text-paper/68 transition hover:text-gold">
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-paper/68 transition hover:text-gold"
+              >
                 {item.label}
               </a>
             ))}
@@ -37,7 +45,9 @@ export function Footer() {
             <p>{site.email}</p>
             <p>{site.displayPhone}</p>
           </div>
-          <p className="mt-6 text-sm text-paper/48">&copy; 2026 {site.name}. All rights reserved.</p>
+          <p className="mt-6 text-sm text-paper/48">
+            &copy; 2026 {site.name}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
