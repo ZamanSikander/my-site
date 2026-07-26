@@ -4,7 +4,7 @@ import { MotionSection } from '@/components/motion-section';
 
 export function Projects() {
   return (
-    <section id="projects" className="section-pad bg-paper dark:bg-ink">
+    <section id="projects" className="section-pad">
       <div className="container-shell">
         <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
           <MotionSection className="max-w-3xl">

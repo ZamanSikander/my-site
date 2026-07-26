@@ -8,7 +8,6 @@ export function Hero() {
       id="home"
       className="relative isolate overflow-hidden pb-16 pt-32 sm:pt-36 lg:min-h-[92vh] lg:pb-20 lg:pt-40"
     >
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(rgba(16,16,20,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(16,16,20,0.055)_1px,transparent_1px)] bg-[size:44px_44px] dark:bg-[linear-gradient(rgba(247,245,239,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(247,245,239,0.055)_1px,transparent_1px)]" />
       <div className="absolute right-0 top-24 -z-10 h-72 w-72 rounded-full bg-clay/16 blur-3xl dark:bg-gold/12" />
 
       <div className="container-shell grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">

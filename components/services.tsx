@@ -3,7 +3,7 @@ import { MotionSection } from '@/components/motion-section';
 
 export function Services() {
   return (
-    <section id="services" className="section-pad bg-white dark:bg-[#151515]">
+    <section id="services" className="section-pad">
       <div className="container-shell">
         <MotionSection className="max-w-3xl">
           <p className="eyebrow">Services</p>

@@ -55,7 +55,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="section-pad bg-paper dark:bg-ink">
+    <section id="contact" className="section-pad">
       <div className="container-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <MotionSection>
           <p className="eyebrow">Contact</p>

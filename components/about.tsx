@@ -3,7 +3,7 @@ import { MotionSection } from '@/components/motion-section';
 
 export function About() {
   return (
-    <section id="about" className="section-pad bg-white dark:bg-[#151515]">
+    <section id="about" className="section-pad">
       <div className="container-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <MotionSection>
           <div className="relative mx-auto max-w-[380px] overflow-hidden rounded-md border border-ink/10 bg-ink shadow-soft sm:max-w-[440px] lg:mx-0">

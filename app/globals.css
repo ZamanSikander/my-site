@@ -22,12 +22,20 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: var(--font-body), Arial, sans-serif;
-  background: #f7f5ef;
+  background-color: #f7f5ef;
+  background-image: 
+    linear-gradient(rgba(16, 16, 20, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 16, 20, 0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
   color: #101014;
 }
 
 .dark body {
-  background: #101014;
+  background-color: #101014;
+  background-image: 
+    linear-gradient(rgba(247, 245, 239, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(247, 245, 239, 0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
   color: #f7f5ef;
 }
 
