@@ -1,5 +1,5 @@
-import { services } from '@/lib/content';
-import { MotionSection } from '@/components/motion-section';
+import { services } from "@/lib/content";
+import { MotionSection } from "@/components/motion-section";
 
 export function Services() {
   return (
@@ -7,10 +7,13 @@ export function Services() {
       <div className="container-shell">
         <MotionSection className="max-w-3xl">
           <p className="eyebrow">Services</p>
-          <h2 className="mt-3 font-[var(--font-display)] text-3xl font-semibold sm:text-4xl">Web work that is built for the way people actually use it.</h2>
+          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+            Web work that is built for the way people actually use it.
+          </h2>
           <p className="mt-4 text-lg leading-8 text-ink/68 dark:text-paper/68">
-            From the first landing page to the product screens behind the login, I help shape reliable, responsive
-            interfaces that feel clear and fast.
+            From the first landing page to the product screens behind the login,
+            I help shape reliable, responsive interfaces that feel clear and
+            fast.
           </p>
         </MotionSection>
 
@@ -22,7 +25,9 @@ export function Services() {
                   <Icon aria-hidden="true" className="h-5 w-5" />
                 </div>
                 <h3 className="mt-6 text-xl font-semibold">{title}</h3>
-                <p className="mt-3 leading-7 text-ink/66 dark:text-paper/66">{description}</p>
+                <p className="mt-3 leading-7 text-ink/66 dark:text-paper/66">
+                  {description}
+                </p>
               </article>
             </MotionSection>
           ))}

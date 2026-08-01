@@ -130,7 +130,7 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     title: "Portfolio Website",
-    image: "/assets/portfolio-website.webp",
+    image: "/assets/project-1.png",
     description:
       "A personal portfolio site built with React and Tailwind CSS to present services and selected work.",
     href: "https://yourportfolio.com",
