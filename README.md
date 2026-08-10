@@ -1,6 +1,6 @@
 # Zaman Sikander Portfolio
 
-Modern portfolio site migrated from Vite/React to Next.js 14 App Router with TypeScript, Tailwind CSS, Framer Motion, dark mode, static SEO files, and static export support for shared hosting.
+Professional developer portfolio built with Next.js 14 App Router, TypeScript, Tailwind CSS, Framer Motion, dark mode, static SEO files, and static export support for shared hosting.
 
 ## Stack
 
@@ -36,14 +36,13 @@ The production files are generated in `out/`. Upload the contents of `out/` to t
 - `public/sitemap.xml` and `public/robots.txt` are hand-written static files.
 - The contact form is UI only. Submission is intentionally not wired up.
 
-## Migrated Content
+## Portfolio Content
 
-- Hero copy, bio, services, experience, skills, contact details, social links, and testimonials were migrated from the existing site.
-- Existing visual assets were copied into `public/assets` and converted to WebP for the live UI.
+- Hero copy, bio, services, working process, skills, contact details, social links, and client testimonials are maintained in `lib/content.ts` and the section components.
+- Project visuals are stored in `public/assets`, with WebP versions used in the live UI where available.
 - Google Analytics measurement ID `G-B88F4P2GE9` was preserved. Override it with `NEXT_PUBLIC_GA_ID` if needed.
 
-## Placeholders to Replace
+## Project Links
 
-- Project links currently use placeholders: `yourportfolio.com`, `yourecommerce.com`, `yourdashboard.com`, and `landingpage.com`.
-- Project descriptions are based on the old portfolio placeholders and should be replaced with real case study copy when available.
-- The portrait/photo uses the existing illustration asset because the old About section referenced a missing uploaded image.
+- Live URLs are included for projects that have a confirmed public website.
+- Projects without a public URL remain as portfolio previews and do not render a misleading external link.

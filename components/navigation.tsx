@@ -25,15 +25,13 @@ export function Navigation() {
         className="group flex w-full items-center justify-center gap-1 bg-clay px-4 py-2 text-center text-xs font-semibold tracking-wide text-white transition-colors duration-200 hover:bg-[#b05d39]"
       >
         <span className="hidden md:inline">
-          Building more than websites. Create short, trackable links for free
-          with <span className="underline">Lnkeee</span>{" "}
+          Try Lnkeee, my free tool for creating short, trackable links{" "}
           <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
             →
           </span>
         </span>
         <span className="inline md:hidden">
-          Shorten & track links for free{" "}
-          <span className="underline">Lnkeee</span>{" "}
+          Try my free link shortener <span className="underline">Lnkeee</span>{" "}
           <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">
             →
           </span>

@@ -8,7 +8,7 @@ export function Skills() {
         <MotionSection className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Skills</p>
           <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Tools I use to turn ideas into production-ready interfaces.
+            A modern stack, chosen to fit the project.
           </h2>
         </MotionSection>
 

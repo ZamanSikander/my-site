@@ -9,7 +9,11 @@ import {
   Store,
   WandSparkles,
 } from "lucide-react";
-import { GitHubIcon, LinkedInIcon } from "@/components/social-icons";
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  UpworkIcon,
+} from "@/components/social-icons";
 import type {
   Experience,
   Project,
@@ -54,14 +58,14 @@ export const socialLinks: SocialLink[] = [
   {
     label: "Upwork",
     href: "https://www.upwork.com/freelancers/~01ef4eb25f55486b6f?mp_source=share",
-    icon: BriefcaseBusiness,
+    icon: UpworkIcon,
   },
 ];
 
 export const stats: Stat[] = [
-  { value: "3+", label: "Years building responsive web products" },
-  { value: "40%", label: "Speed lift delivered for a client store" },
-  { value: "7", label: "Client testimonials migrated from the old site" },
+  { value: "3+", label: "Years of hands-on web development" },
+  { value: "40%", label: "Performance gain on a client store" },
+  { value: "Global", label: "Remote collaboration with clients" },
 ];
 
 export const coreStack = [
@@ -75,94 +79,122 @@ export const coreStack = [
 
 export const services: Service[] = [
   {
-    title: "Marketing Sites",
+    title: "Service Business Websites",
     description:
-      "Fast, polished landing pages and portfolio sites that make the offer clear on every screen.",
+      "Clear, responsive websites that explain your services, build trust, and turn visits into enquiries.",
     icon: Rocket,
   },
   {
-    title: "SaaS Products",
+    title: "React & Next.js Development",
     description:
-      "Responsive front ends for dashboards, MVPs, onboarding flows, and product interfaces.",
+      "Production-ready front ends for MVPs, dashboards, onboarding flows, and customer-facing products.",
     icon: Blocks,
   },
   {
-    title: "Business Websites",
+    title: "WordPress Development",
     description:
-      "Modern business sites, WordPress rebuilds, and service pages with clean UX and SEO fundamentals.",
+      "New builds, redesigns, and performance improvements that keep content easy for your team to manage.",
     icon: Store,
   },
   {
-    title: "Management Systems",
+    title: "Internal Tools",
     description:
-      "Practical admin panels, internal tools, and data-heavy interfaces built for daily use.",
+      "Practical admin panels and workflow tools that make everyday business tasks simpler and faster.",
     icon: BriefcaseBusiness,
   },
 ];
 
 export const experiences: Experience[] = [
   {
-    role: "WordPress Developer",
-    company: "Freelance",
+    role: "Discovery & Planning",
+    company: "How I work",
     description:
-      "Created and maintained WordPress websites, including custom themes and plugin work for clients.",
+      "I clarify the audience, business goal, content, and technical scope before development begins.",
   },
   {
-    role: "Frontend Developer",
-    company: "Freelance",
+    role: "Interface Development",
+    company: "Core expertise",
     description:
-      "Built responsive and interactive web applications with React, Tailwind CSS, and modern tooling.",
+      "I build responsive React interfaces with reusable components, accessible interactions, and clean code.",
   },
   {
-    role: "Web Designer",
-    company: "Freelance",
+    role: "CMS & Integrations",
+    company: "Practical delivery",
     description:
-      "Designed and developed responsive websites with HTML, CSS, and Bootstrap for small businesses.",
+      "I connect content management, forms, databases, and third-party services around the needs of the project.",
   },
   {
-    role: "MVP Developer",
-    company: "Freelance",
+    role: "Launch & Support",
+    company: "After the build",
     description:
-      "Designed and developed a responsive MVP for a construction business using React and Tailwind CSS.",
+      "I test across screen sizes, improve performance, support deployment, and make handoff straightforward.",
   },
 ];
 
 export const projects: Project[] = [
   {
-    title: "Portfolio Website",
-    image: "/assets/project-1.png",
+    title: "Lnkeee",
+    category: "SaaS product",
     description:
-      "A personal portfolio site built with React and Tailwind CSS to present services and selected work.",
-    href: "https://yourportfolio.com",
-    tech: ["React", "Tailwind CSS", "Responsive UI"],
-    isPlaceholder: true,
+      "A link-management platform for creating short, trackable URLs and understanding how each link performs through useful analytics.",
+    image: "/assets/lnkeee-live.webp",
+    href: "https://www.lnkeee.com/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    featured: true,
   },
   {
-    title: "E-commerce Platform",
-    image: "/assets/ecommerce-platform.webp",
+    title: "WM Electric LLC",
+    category: "Electrical contractor website",
+    image: "/assets/wm-electric-live.webp",
     description:
-      "A storefront concept with shopping cart flows, product presentation, and payment-oriented UX.",
-    href: "https://yourecommerce.com",
-    tech: ["React", "Commerce UX", "Payments"],
-    isPlaceholder: true,
+      "A responsive lead-generation website for a Texas electrical subcontractor, presenting capabilities across multifamily, commercial, and residential construction.",
+    href: "https://wmelectrictx.com/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    title: "Dashboard UI",
-    image: "/assets/dashboard-ui.webp",
+    title: "Premier Academy Management System",
+    category: "Operations dashboard",
     description:
-      "Analytics dashboard interface with KPIs, charts, and scan-friendly reporting layouts.",
-    href: "https://yourdashboard.com",
-    tech: ["React", "Dashboard", "Charts"],
-    isPlaceholder: true,
+      "A centralized academy-management system for student records, fee collection, expenses, reporting, and daily administrative work.",
+    image: "/assets/pams-live.webp",
+    href: "https://pams-six.vercel.app/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
-    title: "Landing Page",
-    image: "/assets/portfolio-website.webp",
+    title: "Estimation Service",
+    category: "Trade estimating platform",
+    image: "/assets/estimation-service-live.webp",
     description:
-      "A marketing page for a product or service, focused on crisp messaging and conversion paths.",
-    href: "https://landingpage.com",
-    tech: ["Tailwind CSS", "SEO", "Landing Page"],
-    isPlaceholder: true,
+      "A professional estimating website for construction and trade contractors across the USA and Canada, with a clear plan-upload journey.",
+    href: "https://estimationservice.com/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    title: "Solution Office 247",
+    category: "Digital services website",
+    description:
+      "A modern multi-service website bringing academic writing, front-end development, and e-commerce support into one clear customer journey.",
+    image: "/assets/solution-office-live.webp",
+    href: "https://solutionoffice247.com/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    title: "REN Services & Restoration",
+    category: "Emergency restoration website",
+    image: "/assets/ren-services-live.webp",
+    description:
+      "A conversion-focused website for a North Carolina restoration company, built around 24/7 emergency response and local service coverage.",
+    href: "https://renservicesnc.com/",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    title: "Gattaca Geomarketing",
+    category: "French software landing page",
+    image: "/assets/gattaca-live.webp",
+    description:
+      "A French-language marketing page for customer-loyalty software, explaining the benefits, automated workflow, social proof, and free trial.",
+    href: "https://gattaca-geomarketing.com/",
+    tech: ["HTML", "CSS", "Responsive Landing Page"],
   },
 ];
 
@@ -174,13 +206,13 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Zaman revamped our WordPress site flawlessly - clean, fast, and responsive. Communication was smooth, and everything was delivered on time.",
+      "Zaman revamped our WordPress site flawlessly—clean, fast, and responsive. Communication was smooth, and everything was delivered on time.",
     author: "Engel Rosario",
     role: "CEO at RenServicesNc.com",
   },
   {
     quote:
-      "Our WordPress store saw a 40% speed boost after Zaman optimization. He also improved the checkout UX, leading to higher conversions.",
+      "Our WordPress store saw a 40% speed boost after Zaman's optimization. He also improved the checkout experience, leading to higher conversions.",
     author: "Peter O",
     role: "Manager at The Greenhouse",
   },
@@ -199,7 +231,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "Zaman technical expertise and creative approach helped transform our outdated platform into a modern, user-friendly experience.",
     author: "Larvi Debiane",
-    role: "CEO at Gattaca Fidielty Company",
+    role: "CEO at Gattaca Loyalty Company",
   },
   {
     quote:

@@ -1,9 +1,10 @@
 "use client";
 
-import { Mail, Phone, Send, Star } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
 import { FormEvent, useState } from "react";
 import { site, socialLinks } from "@/lib/content";
 import { MotionSection } from "@/components/motion-section";
+import { UpworkIcon } from "@/components/social-icons";
 
 export function Contact() {
   const [status, setStatus] = useState<
@@ -60,17 +61,17 @@ export function Contact() {
         <MotionSection>
           <p className="eyebrow">Contact</p>
           <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Have something special in mind?
+            Tell me what you&apos;re building.
           </h2>
           <div className="mt-6 space-y-4 text-lg leading-8 text-ink/68 dark:text-paper/68">
             <p>
-              I am always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision.
+              Share what your business needs, what is not working today, and
+              what a successful outcome would look like.
             </p>
             <p>
-              Whether you need a web application, want to revamp your digital
-              presence, or just want to chat about technology, I am here to
-              help.
+              I can help with a new business website, a WordPress rebuild, a
+              React product interface, or a focused MVP. I&apos;ll reply with
+              practical next steps.
             </p>
           </div>
           <div className="mt-8 space-y-3">
@@ -186,9 +187,11 @@ export function Contact() {
         href={socialLinks.find(({ label }) => label === "Upwork")?.href}
         target="_blank"
         rel="noreferrer"
-        className="focus-ring fixed bottom-5 left-5 z-40 inline-flex items-center gap-2 rounded-full bg-[#14a800] px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#108a00]"
+        aria-label="View Zaman Sikander's Top Rated Upwork profile"
+        className="focus-ring fixed bottom-4 left-4 z-40 inline-flex items-center gap-1.5 rounded-full bg-[#14a800] px-3 py-2 text-xs font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:bg-[#108a00]"
       >
-        <Star className="h-4 w-4 fill-current" />5 star review on Upwork
+        <UpworkIcon className="h-4 w-5" />
+        Top Rated
       </a>
     </section>
   );

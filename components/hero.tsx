@@ -12,14 +12,14 @@ export function Hero() {
 
       <div className="container-shell grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <MotionSection>
-          <p className="eyebrow">Freelance full-stack web developer</p>
+          <p className="eyebrow">Full-stack developer for growing businesses</p>
           <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[1.02] text-ink sm:text-6xl lg:text-7xl dark:text-paper">
-            Crafting modern, responsive web experiences.
+            Websites that make your business easier to understand—and easier to choose.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/70 dark:text-paper">
-            I am {site.name}, a front-end focused developer with 3+ years of
-            experience building user-friendly websites and digital products with
-            React, Tailwind CSS, JavaScript, WordPress, and modern tooling.
+            I&apos;m {site.name}. I design and build fast, responsive websites,
+            MVPs, and business tools using React, Next.js, and WordPress—from
+            first idea through launch.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

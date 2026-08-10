@@ -17,3 +17,21 @@ export function LinkedInIcon(props: SocialIconProps) {
     </svg>
   );
 }
+
+export function UpworkIcon(props: SocialIconProps) {
+  return (
+    <svg
+      viewBox="0 0 28 20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M2.5 4.5v5.25a4.25 4.25 0 0 0 8.5 0V4.5" />
+      <path d="M11 4.5c1.15 5.7 4.15 8.5 8.1 8.5 3.55 0 5.9-1.9 5.9-4.75 0-2.35-1.7-4.15-4.15-4.15-3.75 0-5.85 3.55-5.85 8.9v4" />
+    </svg>
+  );
+}

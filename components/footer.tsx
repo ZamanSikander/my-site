@@ -7,8 +7,8 @@ export function Footer() {
         <div>
           <h2 className="text-3xl font-semibold">{site.name}</h2>
           <p className="mt-4 max-w-md leading-7 text-paper/68">
-            Creating elegant, responsive, and user-friendly web experiences
-            through clean code and thoughtful design.
+            Building responsive websites and web products for service
+            businesses, founders, and growing teams.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {socialLinks.map(({ href, label, icon: Icon }) => (

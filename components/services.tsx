@@ -8,12 +8,12 @@ export function Services() {
         <MotionSection className="max-w-3xl">
           <p className="eyebrow">Services</p>
           <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Web work that is built for the way people actually use it.
+            Web development shaped around a real business goal.
           </h2>
           <p className="mt-4 text-lg leading-8 text-ink/68 dark:text-paper/68">
-            From the first landing page to the product screens behind the login,
-            I help shape reliable, responsive interfaces that feel clear and
-            fast.
+            Whether you need more enquiries, a clearer customer journey, or a
+            useful internal tool, I turn the requirement into a focused,
+            maintainable product.
           </p>
         </MotionSection>
 

@@ -23,10 +23,11 @@ export type Service = {
 export type Project = {
   title: string;
   description: string;
+  category: string;
   image: string;
   href: string;
   tech: string[];
-  isPlaceholder?: boolean;
+  featured?: boolean;
 };
 
 export type Testimonial = {

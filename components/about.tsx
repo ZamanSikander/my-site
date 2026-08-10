@@ -21,23 +21,23 @@ export function About() {
         <MotionSection delay={0.1}>
           <p className="eyebrow">About</p>
           <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
-            Frontend detail with full-stack practicality.
+            A practical developer who cares about the details.
           </h2>
           <div className="mt-6 space-y-4 text-lg leading-8 text-ink/68 dark:text-paper/68">
             <p>
-              Hi there. I am Zaman, a passionate frontend developer with over 3
-              years of experience creating elegant, responsive, and
-              user-friendly web applications.
+              I&apos;m a freelance web developer based in Pakistan, working
+              remotely with businesses that need a dependable digital presence
+              or a focused web product.
             </p>
             <p>
-              I specialize in modern JavaScript frameworks like React, with a
-              strong focus on pixel-perfect interfaces, design systems,
-              accessibility standards, and clean implementation.
+              My strongest work sits where design and development meet: turning
+              business requirements into clear page structures, responsive
+              interfaces, and reusable components.
             </p>
             <p>
-              My work bridges design and development: practical enough for
-              business goals, polished enough to feel considered, and structured
-              enough to keep evolving after launch.
+              I communicate clearly, build with maintainability in mind, and
+              stay involved through testing and launch so the finished site is
+              useful—not just visually polished.
             </p>
           </div>
 
