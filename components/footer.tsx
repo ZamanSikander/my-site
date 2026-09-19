@@ -24,6 +24,21 @@ export function Footer() {
               </a>
             ))}
           </div>
+          <div className="mt-6">
+            <a
+              href="https://codetrendy.com/?utm_source=zamansikander.com&utm_medium=badge"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="inline-block transition-opacity hover:opacity-80"
+            >
+              <img
+                src="https://codetrendy.com/api/badge?style=classic"
+                alt="Curated by CodeTrendy"
+                height="54"
+                className="h-[54px] w-auto"
+              />
+            </a>
+          </div>
         </div>
 
         <div className="md:text-right">
