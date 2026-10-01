@@ -63,6 +63,9 @@ export const metadata: Metadata = {
     icon: "/favicon_3.png",
     apple: "/android_facicon.png",
   },
+  verification: {
+    google: "Dx15yWbO5oAUBJ-gQi0g7pmxY00Uh-prKA2SGzKke60",
+  },
 };
 
 const jsonLd = {
